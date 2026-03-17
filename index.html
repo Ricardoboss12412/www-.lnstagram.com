@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Login Dark</title>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+<style>
+body{
+    margin:0;
+    font-family: Arial, sans-serif;
+    background:#0f2027;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:100vh;
+    color:white;
+}
+
+.lang{
+    position:absolute;
+    top:20px;
+    width:100%;
+    text-align:center;
+    color:#ccc;
+    font-size:14px;
+}
+
+.container{
+    width:350px;
+    text-align:center;
+}
+
+/* LOGO INSTAGRAM COLORAT */
+.logo{
+    font-size:80px;
+    margin-bottom:20px;
+}
+
+.logo i{
+    background: linear-gradient(45deg,#feda75,#fa7e1e,#d62976,#962fbf,#4f5bd5);
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+}
+
+input{
+    width:100%;
+    padding:15px;
+    margin:10px 0;
+    border-radius:12px;
+    border:1px solid rgba(255,255,255,0.2);
+    background:rgba(255,255,255,0.05);
+    color:white;
+    font-size:16px;
+    outline:none;
+}
+
+input::placeholder{
+    color:#bbb;
+}
+
+.password-container{
+    position:relative;
+}
+
+.show-btn{
+    position:absolute;
+    right:15px;
+    top:50%;
+    transform:translateY(-50%);
+    cursor:pointer;
+    color:white;
+    font-weight:bold;
+    font-size:14px;
+}
+
+button{
+    width:100%;
+    padding:15px;
+    border-radius:25px;
+    border:none;
+    background:#1877f2;
+    color:white;
+    font-size:18px;
+    margin-top:10px;
+    cursor:pointer;
+}
+
+button:hover{
+    opacity:0.9;
+}
+
+.link{
+    margin-top:20px;
+    display:block;
+    color:#ccc;
+    text-decoration:none;
+}
+
+.create{
+    margin-top:30px;
+    padding:12px;
+    border:2px solid #1877f2;
+    border-radius:25px;
+    color:#1877f2;
+    text-decoration:none;
+    display:block;
+}
+
+/* META LOGO */
+.meta{
+    position:absolute;
+    bottom:30px;
+    width:100%;
+    text-align:center;
+    color:#aaa;
+    font-size:18px;
+}
+
+.meta i{
+    margin-right:6px;
+}
+</style>
+</head>
+
+<body>
+
+<div class="lang">Română</div>
+
+<div class="container">
+
+    <div class="logo">
+        <i class="fab fa-instagram"></i>
+    </div>
+
+    <input type="text" placeholder="Nume utilizator, adresă de e-mail sau telefon">
+
+    <div class="password-container">
+        <input type="password" id="password" placeholder="Parolă">
+        <span class="show-btn" onclick="togglePassword()">Show</span>
+    </div>
+
+    <button onclick="demo()">Conectare</button>
+
+    <a href="#" class="link">Ai uitat parola?</a>
+
+    <a href="#" class="create">Creează un cont nou</a>
+
+</div>
+
+<div class="meta">
+    <i class="fa-brands fa-meta"></i> Meta
+</div>
+
+<script>
+function togglePassword(){
+    var pass = document.getElementById("password");
+    var btn = document.querySelector(".show-btn");
+
+    if(pass.type === "password"){
+        pass.type = "text";
+        btn.textContent = "Hide";
+    } else {
+        pass.type = "password";
+        btn.textContent = "Show";
+    }
+}
+
+function demo(){
+    alert("Demo - nu este conectat la server.");
+}
+</script>
+
+</body>
+</html>
